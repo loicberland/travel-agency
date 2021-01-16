@@ -1,0 +1,11 @@
+@import 'function';
+
+%paddingContainer{
+    padding: 0 pxToRem(15);
+}
+
+%spaceB{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

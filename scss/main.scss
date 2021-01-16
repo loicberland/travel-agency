@@ -3,22 +3,44 @@
 @import 'mixin';
 @import 'variable';
 
-*{margin: 0;padding: 0;}
+*{margin: 0;padding: 0; font-family: 'Kalam', cursive;}
 a{text-decoration: none;}
 li{list-style: none;}
+nav{
+    height: pxToRem(100);
+    padding: pxToRem(10) pxToRem(15);
+    display:flex;
+    align-items: center;
+}
 
 .container{
-    display: flex;
-    flex-wrap: wrap;                        //remettre en forme et diferentier class pour container simple et nav 
-    align-items: center;
-    justify-content: space-between;
-    width: 50%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+    @extend %paddingContainer;
+    width: 100%;
+    &-fluid{
+        @extend %paddingContainer;
+        width: 50%;
+        margin-right: auto;
+        margin-left: auto;
+    }
 }
-.nav{
-    display: flex;
-    justify-content: space-between;
+.navbar{
+    @extend %spaceB;
+    .navbar-list{
+        @extend %spaceB;
+        .nav-item{
+            color: $text-dark;
+            font-size: 22px;
+            margin: 10px 15px;
+            &:hover{
+                color: $text-orange;
+            }
+        }
+    }
+    .navbar-brand{
+        color: $text-dark;
+        font-size: 50px;
+        .brand-point-color{
+            color: $text-orange;
+        }
+    }
 }
