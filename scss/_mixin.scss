@@ -1,0 +1,7 @@
+@import 'expend';
+
+@mixin container($max-width, $width){
+    @extend %container;
+    width: $width;
+    max-width: $max-width;
+}

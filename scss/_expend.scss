@@ -1,10 +1,12 @@
 @import 'function';
 
-%paddingContainer{
+%container{
     padding: 0 pxToRem(15);
+    margin-right: auto;
+    margin-left: auto;
 }
 
-%spaceB{
+%spaceBetween{
     display: flex;
     justify-content: space-between;
     align-items: center;

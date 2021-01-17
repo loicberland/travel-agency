@@ -1,5 +1,17 @@
 .container, .container-fluid {
-  padding: 0 0.9375rem; }
+  padding: 0 0.9375rem;
+  margin-right: auto;
+  margin-left: auto; }
+
+.navbar, .navbar .navbar-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.container, .container-fluid {
+  padding: 0 0.9375rem;
+  margin-right: auto;
+  margin-left: auto; }
 
 .navbar, .navbar .navbar-list {
   display: flex;
@@ -24,21 +36,21 @@ nav {
   align-items: center; }
 
 .container {
-  width: 100%; }
+  width: 100%;
+  max-width: 100%; }
   .container-fluid {
-    width: 50%;
-    margin-right: auto;
-    margin-left: auto; }
+    width: 100%;
+    max-width: 50%; }
 
 .navbar .navbar-list .nav-item {
   color: #161616;
-  font-size: 22px;
-  margin: 10px 15px; }
+  font-size: 1.375rem;
+  margin: 0.625rem 0.9375rem; }
   .navbar .navbar-list .nav-item:hover {
     color: #f5a700; }
 
 .navbar .navbar-brand {
   color: #161616;
-  font-size: 50px; }
+  font-size: 3.125rem; }
   .navbar .navbar-brand .brand-point-color {
     color: #f5a700; }

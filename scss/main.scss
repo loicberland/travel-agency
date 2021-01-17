@@ -14,23 +14,21 @@ nav{
 }
 
 .container{
-    @extend %paddingContainer;
-    width: 100%;
+    @include container(100%,100%);
     &-fluid{
-        @extend %paddingContainer;
-        width: 50%;
-        margin-right: auto;
-        margin-left: auto;
+        @include container(50%,100%);
     }
 }
+
+
 .navbar{
-    @extend %spaceB;
+    @extend %spaceBetween;
     .navbar-list{
-        @extend %spaceB;
+        @extend %spaceBetween;
         .nav-item{
             color: $text-dark;
-            font-size: 22px;
-            margin: 10px 15px;
+            font-size: pxToRem(22);
+            margin: pxToRem(10) pxToRem(15);
             &:hover{
                 color: $text-orange;
             }
@@ -38,7 +36,7 @@ nav{
     }
     .navbar-brand{
         color: $text-dark;
-        font-size: 50px;
+        font-size: pxToRem(50);
         .brand-point-color{
             color: $text-orange;
         }
