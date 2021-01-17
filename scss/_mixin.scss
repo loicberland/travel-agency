@@ -1,0 +1,26 @@
+@import 'expend';
+@import 'variable';
+
+
+@mixin for-size($size) {
+    @if $size == sm {
+        @media (max-width: $max-width-sm) { @content; }
+    } @else if $size == md {
+        @media (min-width: $max-width-md) { @content; }
+    } @else if $size == lg {
+        @media (min-width: $max-width-lg) { @content; }
+    } @else if $size == xl {
+        @media (min-width: $max-width-xl) { @content; }
+    } @else if $size == xxl {
+        @media (min-width: $max-width-xxl) { @content; }
+    }
+}
+
+@mixin container($max-width, $width){
+    padding: 0 pxToRem(15);
+    margin-right: auto;
+    margin-left: auto;
+    max-width: $max-width;
+    width: $width;
+
+}

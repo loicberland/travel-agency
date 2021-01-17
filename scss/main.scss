@@ -1,24 +1,64 @@
 @import 'expend';
 @import 'function';
-@import 'mixin';
 @import 'variable';
+@import 'mixin';
 
-*{margin: 0;padding: 0;}
+*{margin: 0;padding: 0; font-family: 'Kalam', cursive;}
 a{text-decoration: none;}
 li{list-style: none;}
-
-.container{
-    display: flex;
-    flex-wrap: wrap;                        //remettre en forme et diferentier class pour container simple et nav 
+nav{
+    height: pxToRem(100);
+    padding: pxToRem(10) pxToRem(15);
+    display:flex;
     align-items: center;
-    justify-content: space-between;
-    width: 50%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
 }
-.nav{
-    display: flex;
-    justify-content: space-between;
+.container{
+    @include container(100%,100%);
+    &-fluid{
+        @include for-size(sm){
+            @include container(100%,100%);
+        };
+        @include container(60%,100%);
+        @include for-size(md){
+            @include container(100%,100%);
+        };
+        @include for-size(xxl){
+            @include container(60%,100%);
+        };
+    }
+}
+.navbar{
+    @include for-size(md){   
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    };
+    .navbar-list{
+        display: flex;
+        justify-content: center;
+        .nav-item{
+            color: $text-dark;
+            font-size: pxToRem(20);
+            margin: pxToRem(5) pxToRem(7.5);
+            @include for-size(lg){
+                font-size: pxToRem(22);
+                margin: pxToRem(10) pxToRem(15);
+            };
+            &:hover{
+                color: $text-orange;
+            }
+        }
+    }
+    .navbar-brand{
+        display: block;
+        text-align: center;
+        color: $text-dark;
+        font-size: pxToRem(40);
+        @include for-size(lg){
+            font-size: pxToRem(50);
+        };
+        .brand-point-color{
+            color: $text-orange;
+        }
+    }
 }
