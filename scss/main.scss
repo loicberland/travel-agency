@@ -39,7 +39,7 @@ nav{
         .nav-item{
             color: $text-dark;
             font-size: pxToRem(20);
-            margin: pxToRem(5) pxToRem(7.5);
+            margin: pxToRem(5) pxToRem(2);
             @include for-size(lg){
                 font-size: pxToRem(22);
                 margin: pxToRem(10) pxToRem(15);

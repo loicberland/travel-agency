@@ -61,7 +61,7 @@ nav {
   .navbar .navbar-list .nav-item {
     color: #161616;
     font-size: 1.25rem;
-    margin: 0.3125rem 0.46875rem; }
+    margin: 0.3125rem 0.125rem; }
     @media (min-width: 960px) {
       .navbar .navbar-list .nav-item {
         font-size: 1.375rem;
