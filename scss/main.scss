@@ -6,7 +6,7 @@
 *{margin: 0;padding: 0; font-family: 'Kalam', cursive;}
 a{text-decoration: none;}
 li{list-style: none;}
-nav{
+#nav{
     height: pxToRem(100);
     padding: pxToRem(10) pxToRem(15);
     display:flex;
@@ -60,5 +60,43 @@ nav{
         .brand-point-color{
             color: $text-orange;
         }
+    }
+}
+
+.grid-container{
+    display: grid;
+    height: 100%;
+    align-content: center;
+    justify-content: center;
+}
+
+.text-center{
+    text-align: center;
+}
+.img{
+    background-image: url(../../dist/img/main.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: pxToRem(380);
+    @include for-size(md){
+        height: pxToRem(580);
+    }
+}
+
+.btn{
+    &-blue{
+        @include btn($bg-blue,$text-white);
+    }
+}
+.titre1{
+    margin: pxToRem(20) pxToRem(30) pxToRem(40) pxToRem(30);
+    font-size: 40px;
+    font-weight: 100;
+    color: $text-dark;
+    line-height: 60px;
+    @include for-size(md){
+        margin: 20px 30px 60px 30px;
+        font-size: 70px;
     }
 }

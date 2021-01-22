@@ -22,5 +22,23 @@
     margin-left: auto;
     max-width: $max-width;
     width: $width;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
+@mixin btn($bgc,$text-color){
+    background-color: $bgc;
+    color: $text-color;
+    border: pxToRem(2) solid #000;
+    border-radius: pxToRem(8);
+    padding: pxToRem(4) pxToRem(10);
+    font-size: pxToRem(18);
+    margin: 0 auto;
+    &:hover{
+        background-color: $text-color;
+        color: $bgc;
+    }
 }
