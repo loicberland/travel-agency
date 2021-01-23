@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Kalam', cursive; }
+  font-family: 'Roboto', sans-serif; }
 
 a {
   text-decoration: none; }
@@ -84,6 +84,7 @@ li {
   display: flex;
   justify-content: center; }
   .navbar .navbar-list .nav-item {
+    font-family: 'Kalam', cursive;
     color: #1f1f1f;
     font-size: 1.25rem;
     margin: 0.3125rem 0.125rem; }
@@ -97,6 +98,7 @@ li {
 .navbar .navbar-brand {
   display: block;
   text-align: center;
+  font-family: 'Kalam', cursive;
   color: #1f1f1f;
   font-size: 2.5rem; }
   @media (min-width: 960px) {
@@ -138,11 +140,60 @@ li {
 
 .titre1 {
   margin: 1.25rem 1.875rem 2.5rem 1.875rem;
-  font-size: 40px;
-  font-weight: 100;
+  font-size: 2.5rem;
+  font-weight: 900;
   color: #1f1f1f;
-  line-height: 60px; }
+  line-height: 5rem; }
   @media (min-width: 720px) {
     .titre1 {
-      margin: 20px 30px 60px 30px;
-      font-size: 70px; } }
+      margin: 1.25rem 1.875rem 3.75rem 1.875rem;
+      font-size: 4.375rem; } }
+
+[class*="grid-column-"] {
+  padding: 0.9375rem;
+  display: grid;
+  justify-content: space-evenly; }
+
+.grid-column-1 {
+  grid-template-columns: auto; }
+
+.grid-column-2 {
+  grid-template-columns: auto auto; }
+
+.grid-column-3 {
+  grid-template-columns: auto auto auto; }
+
+.grid-column-4 {
+  grid-template-columns: auto auto auto auto; }
+
+.grid-column-5 {
+  grid-template-columns: auto auto auto auto auto; }
+
+@media (min-width: 960px) {
+  .grid-column-lg-1 {
+    grid-template-columns: auto; }
+  .grid-column-lg-2 {
+    grid-template-columns: auto auto; }
+  .grid-column-lg-3 {
+    grid-template-columns: auto auto auto; }
+  .grid-column-lg-4 {
+    grid-template-columns: auto auto auto auto; }
+  .grid-column-lg-5 {
+    grid-template-columns: auto auto auto auto auto; } }
+
+.card {
+  width: 9.375rem;
+  text-align: center;
+  margin: 1.25rem 0; }
+  @media (min-width: 720px) {
+    .card {
+      width: 15.625rem; } }
+  .card-img {
+    margin: 1.25rem; }
+  .card-titre {
+    font-size: 1.875rem;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif; }
+  .card-text {
+    font-family: 'Roboto', sans-serif;
+    margin: 1.25rem 0; }

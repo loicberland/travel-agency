@@ -3,9 +3,10 @@
 @import 'variable';
 @import 'mixin';
 
-*{margin: 0;padding: 0; font-family: 'Kalam', cursive;}
+*{margin: 0;padding: 0; font-family: 'Roboto', sans-serif;}
 a{text-decoration: none;}
 li{list-style: none;}
+
 #nav{
     height: pxToRem(100);
     padding: pxToRem(10) pxToRem(15);
@@ -37,6 +38,7 @@ li{list-style: none;}
         display: flex;
         justify-content: center;
         .nav-item{
+            font-family: 'Kalam', cursive;
             color: $text-dark;
             font-size: pxToRem(20);
             margin: pxToRem(5) pxToRem(2);
@@ -52,6 +54,7 @@ li{list-style: none;}
     .navbar-brand{
         display: block;
         text-align: center;
+        font-family: 'Kalam', cursive;
         color: $text-dark;
         font-size: pxToRem(40);
         @include for-size(lg){
@@ -91,12 +94,56 @@ li{list-style: none;}
 }
 .titre1{
     margin: pxToRem(20) pxToRem(30) pxToRem(40) pxToRem(30);
-    font-size: 40px;
-    font-weight: 100;
+    font-size: pxToRem(40);
+    font-weight: 900;
     color: $text-dark;
-    line-height: 60px;
+    line-height: pxToRem(80);
     @include for-size(md){
-        margin: 20px 30px 60px 30px;
-        font-size: 70px;
+        margin: pxToRem(20) pxToRem(30) pxToRem(60) pxToRem(30);
+        font-size: pxToRem(70);
     }
 }
+
+[class*="grid-column-"] {
+    padding: pxToRem(15);
+    display: grid;
+    justify-content:space-evenly; 
+}
+
+.grid-column-1{grid-template-columns: auto; }  
+.grid-column-2{grid-template-columns: auto auto; }  
+.grid-column-3{grid-template-columns: auto auto auto; }  
+.grid-column-4{grid-template-columns: auto auto auto auto; }  
+.grid-column-5{grid-template-columns: auto auto auto auto auto; } 
+
+@include for-size(lg){
+.grid-column-lg-1{grid-template-columns: auto; }  
+.grid-column-lg-2{grid-template-columns: auto auto; }  
+.grid-column-lg-3{grid-template-columns: auto auto auto; }  
+.grid-column-lg-4{grid-template-columns: auto auto auto auto; }  
+.grid-column-lg-5{grid-template-columns: auto auto auto auto auto; }  
+}
+
+.card{
+    width: pxToRem(150);
+    @include for-size(md){
+        width: pxToRem(250);
+
+    }
+    text-align: center;
+    margin: pxToRem(20) 0;
+    &-img{
+        margin: pxToRem(20);
+    }
+    &-titre{
+        font-size: pxToRem(30);
+        text-transform: uppercase;
+        font-family: 'Roboto', sans-serif;
+    }
+    &-text{
+        font-family: 'Roboto', sans-serif;
+        margin: pxToRem(20) 0;
+    }
+}
+
+
