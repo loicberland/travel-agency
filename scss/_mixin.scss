@@ -4,7 +4,7 @@
 
 @mixin for-size($size) {
     @if $size == sm {
-        @media (max-width: $max-width-sm) { @content; }
+        @media (min-width: $max-width-sm) { @content; }
     } @else if $size == md {
         @media (min-width: $max-width-md) { @content; }
     } @else if $size == lg {
